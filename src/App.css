@@ -1,38 +1,120 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-image: url("./assets/images/bg-main-mobile.png");
+	background-size: cover;
+	background-color: #4e087f;
+}
+.App-header__container {
+	position: relative;
+	padding-block: 2rem;
+	width: fit-content;
+	margin: auto;
+}
+.c-card--front {
+	position: absolute;
+	inset: 8rem 6rem auto auto;
+	max-width: 20rem;
+	padding: 0;
+	margin: 0;
+}
+.c-card--front__container {
+	max-width: 20rem;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.c-card--back {
+	/* padding-right: 1rem; */
+	margin-left: 6rem;
+	max-width: 20rem;
+}
+.c-card--back__container {
+	/* padding-right: 1rem; */
+	/* margin-left: 6rem; */
+	max-width: 20rem;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.c-card--cvc {
+	position: absolute;
+	inset: 6.6rem 2.5rem auto auto;
+	color: white;
+}
+.c-card--logo {
+	position: absolute;
+	inset: 1rem auto auto 1rem;
+	color: white;
+	width: 4rem;
+}
+.c-card--number {
+	position: absolute;
+	inset: 6rem auto auto 1rem;
+	color: white;
+}
+.c-card--name {
+	position: absolute;
+	inset: 8rem auto auto 1rem;
+	color: white;
+}
+.c-card--expiry {
+	position: absolute;
+	inset: 8rem 1.5rem auto auto;
+	color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	text-align: left;
+	padding: 6rem 2rem;
+	gap: 2rem;
+	max-width: 30rem;
+	margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Form--label {
+	padding-block: 1rem;
+}
+input {
+	padding-block: 1rem;
+	width: 100%;
+	text-indent: 1rem;
+}
+
+.btn {
+	width: 100%;
+	padding-block: 1rem;
+	font-weight: bold;
+}
+@media (min-width: 1200px) {
+	/* … */
+	.App {
+		display: flex;
+		height: 100vh;
+	}
+	.App-header {
+		background-image: url("./assets/images/bg-main-desktop.png");
+		background-size: cover;
+		background-color: #4e087f;
+		width: 33%;
+
+		outline: navy;
+	}
+	.App-header__container {
+		height: 100%;
+		width: 100%;
+	}
+	main {
+		display: grid;
+		margin: auto;
+		width: 30rem;
+	}
+	.c-card--back {
+		position: absolute;
+		inset: auto auto 25% 40%;
+	}
+	.c-card--front {
+		inset: 25% auto auto 50%;
+	}
 }
