@@ -1,7 +1,6 @@
 .App {
 	text-align: center;
 }
-
 .App-header {
 	background-image: url("./assets/images/bg-main-mobile.png");
 	background-size: cover;
@@ -11,6 +10,7 @@
 	position: relative;
 	padding-block: 2rem;
 	width: fit-content;
+
 	margin: auto;
 }
 .c-card--front {
@@ -68,24 +68,46 @@ form {
 	justify-content: start;
 	text-align: left;
 	padding: 6rem 2rem;
-	gap: 2rem;
-	max-width: 30rem;
+	gap: 1.75rem;
+	max-width: 25rem;
 	margin: auto;
 }
 
 .Form--label {
-	padding-block: 1rem;
+	padding-block: 0.5rem;
+	color: var(--c-vd-violet);
 }
 input {
-	padding-block: 1rem;
+	padding-block: 0.75rem;
 	width: 100%;
 	text-indent: 1rem;
+	border-radius: 5px;
+	outline: none;
+	border: 2px solid var(--c-l-gray-violet);
+
+	color: var(--c-d-gray-violet);
+}
+input:focus {
+	outline: none;
+	/* border-color: #4e087f; */
+	border-color: initial;
+	border-image: linear-gradient(
+		90deg,
+		hsl(278, 94%, 30%) 0%,
+		hsl(249, 99%, 64%) 100%
+	);
+	border-image-slice: 1;
+	border-radius: 15;
 }
 
 .btn {
 	width: 100%;
 	padding-block: 1rem;
 	font-weight: bold;
+	background-color: var(--c-vd-violet);
+	color: var(--c-white);
+	border: none;
+	border-radius: 5px;
 }
 @media (min-width: 1200px) {
 	/* … */
@@ -103,7 +125,7 @@ input {
 	}
 	.App-header__container {
 		height: 100%;
-		width: 100%;
+		/* width: 100%; */
 	}
 	main {
 		display: grid;
@@ -117,4 +139,15 @@ input {
 	.c-card--front {
 		inset: 25% auto auto 50%;
 	}
+	.c-card--cvc {
+		inset: 4.6rem 2.5rem auto auto;
+	}
+}
+
+.on-error {
+	color: var(--c-red);
+	display: none;
+}
+.show-error {
+	display: block;
 }
