@@ -45,6 +45,8 @@ function TheForm(props) {
 				case "card-date-cvc":
 					setErrorStateDateCvc(errorMessageOutput("Input Cannot not be blank"));
 					break;
+				default:
+					break
 			}
     	return validationMessage;
     }
