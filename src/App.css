@@ -55,11 +55,14 @@
 	position: absolute;
 	inset: 8rem auto auto 1rem;
 	color: white;
+	text-transform: uppercase;
+	font-size: small;
 }
 .c-card--expiry {
 	position: absolute;
 	inset: 8rem 1.5rem auto auto;
 	color: white;
+	font-size: small;
 }
 
 form {
@@ -71,6 +74,22 @@ form {
 	gap: 1.75rem;
 	max-width: 25rem;
 	margin: auto;
+}
+.success {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 6rem 2rem;
+	gap: 1.75rem;
+	max-width: 25rem;
+	margin: auto;
+	/* height: 100%; */
+	outline: salmon;
+}
+.success-text {
+	color: var(--c-d-gray-violet);
 }
 
 .Form--label {
@@ -99,8 +118,17 @@ input:focus {
 	border-image-slice: 1;
 	border-radius: 15;
 }
+.show-error-border input:focus,
+.show-error-border input,
+.show-error-border {
+	outline: none;
+	/* border-color: #4e087f; */
+	border-color: red;
 
-.btn {
+	border-radius: 15;
+}
+
+button {
 	width: 100%;
 	padding-block: 1rem;
 	font-weight: bold;
