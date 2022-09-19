@@ -25,13 +25,10 @@
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .c-card--back {
-	/* padding-right: 1rem; */
 	margin-left: 6rem;
 	max-width: 20rem;
 }
 .c-card--back__container {
-	/* padding-right: 1rem; */
-	/* margin-left: 6rem; */
 	max-width: 20rem;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -68,7 +65,7 @@
 form {
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
+	justify-content: flex-start;
 	text-align: left;
 	padding: 6rem 2rem;
 	gap: 1.75rem;
@@ -85,8 +82,6 @@ form {
 	gap: 1.75rem;
 	max-width: 25rem;
 	margin: auto;
-	/* height: 100%; */
-	outline: salmon;
 }
 .success-text {
 	color: var(--c-d-gray-violet);
@@ -123,7 +118,7 @@ input:focus {
 .show-error-border {
 	outline: none;
 	/* border-color: #4e087f; */
-	border-color: red;
+	border-color: var(--c-red);
 
 	border-radius: 15;
 }
@@ -148,12 +143,9 @@ button {
 		background-size: cover;
 		background-color: #4e087f;
 		width: 33%;
-
-		outline: navy;
 	}
 	.App-header__container {
 		height: 100%;
-		/* width: 100%; */
 	}
 	main {
 		display: grid;
